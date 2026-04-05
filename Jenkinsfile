@@ -1,3 +1,9 @@
+stage('Git Pull') {
+    steps {
+        sh 'git pull origin main'
+    }
+}
+
 pipeline{
     agent any
     stages{
