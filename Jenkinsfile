@@ -17,6 +17,8 @@ pipeline{
                 sh 'docker compose down || true'
                 // start app, rebuilding flask image
                 sh 'docker compose up -d --build'
+
+                sh 'sleep 40'
             }
         }
     }
