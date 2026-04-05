@@ -1,12 +1,12 @@
-stage('Git Pull') {
+pipeline{
+    agent any
+    stages{
+
+        stage('Git Pull') {
     steps {
         sh 'git pull origin main'
     }
 }
-
-pipeline{
-    agent any
-    stages{
         stage('Clone repo'){
             steps{
                 git branch: 'main', url: 'https://github.com/prashantgohel321/DevOps-Project-Two-Tier-Flask-App.git'
